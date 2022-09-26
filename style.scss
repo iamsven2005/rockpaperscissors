@@ -1,0 +1,167 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    background: black;
+    color: #03A062;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    button {
+        position: absolute;
+        background-color: #03A062;
+        right: 15px;
+        top: -15px;
+        padding: 2px;
+
+        &:hover {
+            background-color: white;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin-bottom: 1.5em;
+    animation: fadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.instructions {
+    margin: auto;
+    width: 30%;
+    line-height: 1.5em;
+    animation: fadeIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }   
+}
+
+.fade-out {
+    animation: fadeOut ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+}
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color:#03A062;
+    font-weight: bold;
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid #037a4a;
+    animation: fadeIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        transition: ease-out 0.3s;
+        border: 1px solid white;
+        box-shadow: 0.1em 0.1em 2em #03A062; 
+        color: white;
+    }
+}
+
+.fade-in-anim {
+    animation: fadeIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.main {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5em;
+
+    .playerSide {
+        margin: 2em;
+
+        span {
+            display: inline-block;
+        }
+        .button.hover-on {
+            box-sizing: border-box;
+            margin-bottom: 1em;
+            width: auto;
+            height: 7em;
+            &:hover {
+                transition: ease-out 0.2s;
+                transform: scale(1.1);
+                box-shadow: 0.5em 0.5em 3em #03A062; 
+            }
+        }
+
+        .button {
+            margin-bottom: 1em;
+            width: auto;
+            height: 7em;
+        }
+        div {
+            margin: 0.5em;
+        }
+    }
+
+    .result-board {
+        visibility: hidden;
+        line-height: 2em;
+        padding: 2em;
+        margin-left: 5em;
+        margin-right: 5em;
+        
+        .round-result, .final-result {
+            margin: 0.5em;
+            padding: 1em;
+            border: 1px dotted #03A062;
+        }        
+        .final-result {
+            visibility: hidden;
+        }
+    }
+}
+
+@keyframes textTransform {
+    0% {
+      transform: scale(1); }
+    50% {
+        transform: scale(1.2); } 
+    100% {
+        transform: scale(1); } 
+}
+
+.text-transform {
+    animation: textTransform ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+

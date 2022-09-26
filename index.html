@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+    <h1>Rock, Paper, Scissors</h1>
+    <button><img src="images/on.svg" class="sound-icon"></button>
+    </div>
+    <p class="instructions">Instructions: You know the rules! Pick between Rock, Paper and Scissors. Try to get 5 points before the computer. Good luck!</p>
+    <button class="start">START THE GAME</button>
+    <div class="main">
+        <div class="playerSide">
+            <input type="image" src="images/rock.jpg" class="button hover-on" id="rock">
+            <input type="image" src="images/paper.jpg" class="button hover-on" id="paper">
+            <input type="image" src="images/scissors.jpg" class="button hover-on" id="scissors">
+            <div>YOUR SCORE: <span class="playerScore">0</span></div>
+            <div>COMPUTER SCORE: <span class="compScore">0</span></div>
+        </div>
+        <div class="result-board">
+            <div class="round-result">
+                <div class="compChoice"></div>
+                <div class="results"></div>
+            </div>
+            <div class="final-result">
+                <div class="winner"></div>
+            </div>
+        </div>
+    </div>
+    <audio src="sounds/click.wav" id="click"></audio>
+    <audio src="sounds/start.wav" id="start"></audio>
+    <audio src="sounds/win.wav" id="win"></audio>
+    <audio src="sounds/lose.wav" id="lose"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
